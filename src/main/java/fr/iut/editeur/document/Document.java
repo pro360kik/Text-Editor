@@ -30,4 +30,5 @@ public class Document {
     public String toString() {
         return this.texte;
     }
+
 }

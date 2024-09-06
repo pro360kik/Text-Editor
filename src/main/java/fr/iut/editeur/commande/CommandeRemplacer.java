@@ -20,5 +20,6 @@ public class CommandeRemplacer extends CommandeDocument {
         this.document.remplacer(debut, fin, chaine);
 
         super.executer();
+
     }
 }
