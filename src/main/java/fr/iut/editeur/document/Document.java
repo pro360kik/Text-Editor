@@ -20,14 +20,18 @@ public class Document {
         this.texte += texte;
     }
 
-    public void remplacer(int debut, int fin, String remplacement) {
+    public void remplacer (int debut, int fin, String remplacement) {
         String partieGauche = texte.substring(0, debut);
         String partieDroite = texte.substring(fin + 1);
         texte = partieGauche + remplacement + partieDroite;
     }
 
-    public void majuscules(int debut, int fin) {
+    public void majuscules (int debut, int fin) {
         remplacer(debut, fin , texte.substring(debut, fin + 1).toUpperCase());
+    }
+
+    public void effacer (int debut, int fin) {
+        remplacer(debut, fin , "");
     }
 
     @Override
