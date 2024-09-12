@@ -1,0 +1,20 @@
+name : test_unitaires
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: setupJava
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'oracle'
+      - name: run-test
+        run: mvn test
