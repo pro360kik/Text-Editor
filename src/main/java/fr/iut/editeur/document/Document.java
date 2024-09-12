@@ -1,7 +1,13 @@
 package fr.iut.editeur.document;
 
+/*
+* Classe contenant le texte courant ainsi que les méthodes permetant d'altérer le texte courant
+*/
 public class Document {
 
+    /*
+    attribut contenant le texte courant
+    */
     private String texte;
 
     public Document() {
@@ -69,6 +75,10 @@ public class Document {
         texte = "";
     }
 
+    /*
+    * méthode permetant d'afficher tous les attributs de Document en string dans la sortie standard
+    * @return le string final
+    */
     @Override
     public String toString() {
         return this.texte;
